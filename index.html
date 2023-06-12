@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and drop</title>
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font awesome cdn css link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- heading start -->
+        <div class="heading">
+            <h1>Drag and Drop</h1>
+        </div>
+        <!-- heading end -->
+
+        <div class="both-container">
+            <!-- left container start -->
+            <div class="left-container">
+                <div class="box">
+                    <ul id="drag-area"></ul>
+                </div>
+            </div>
+            <!-- left container end -->
+            
+            <!-- middle container start -->
+            <div class="middle-container" title="Indicates to drop the items.">
+                <i class="fa fa-long-arrow-right"></i>
+            </div>
+            <!-- middle container end -->
+
+            <!-- right container start -->
+            <div class="right-container">
+                <div class="box" ondragover="dragOver(event)" ondrop="drop(event)">
+                    <ul id="drop-area">
+                        <span class="default-message" id="default-message">
+                            <i class="fa fa-plus-circle"></i>Drop your items here.
+                        </span>
+                    </ul>
+                </div>
+                <!-- reset button -->
+                <div class="button-container">
+                    <button type="button" id="reset-button" onclick="resetContainers()" disabled>Reset</button>
+                </div>
+            </div>
+            <!-- right container end -->
+        </div>
+    </div>
+    
+    <!-- custom js link -->
+    <script src="script.js"></script>
+</body>
+</html>

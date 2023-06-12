@@ -1,0 +1,339 @@
+/* --------------------------------------------------
+    Nunito font style
+-------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    list-style-type: none;
+}
+
+html {
+    background-color: #34495E;
+}
+
+/* --------------------------------------------------
+    Main container style
+-------------------------------------------------- */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 5rem;
+}
+
+/* --------------------------------------------------
+    Heading style
+-------------------------------------------------- */
+
+.heading {
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+/* --------------------------------------------------
+    Left and right container style
+-------------------------------------------------- */
+
+.both-container {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+}
+  
+.left-container, 
+.right-container {
+    height: 400px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.box {
+    height: 100%;
+    border-radius: 5px;
+    border: 1px dashed blue;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+li {
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 5px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+li:first-child {
+    margin-top: 0;
+    padding-bottom: 0;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
+}
+
+.text
+.icon {
+    font-size: 18px;
+    word-wrap: break-word;
+}
+
+/* --------------------------------------------------
+    Middle container style
+-------------------------------------------------- */
+
+.middle-container {
+    color: green;
+    background-color: #fff;
+    border-radius: 100vh;
+    padding: 3px 30px;
+}
+
+/* --------------------------------------------------
+    Default message style
+-------------------------------------------------- */
+
+.default-message {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 0.5rem; 
+    height: 45vh;
+    font-size: 18px;
+}
+
+.default-message i {
+    color: #2ECC71;
+    font-size: 20px;
+}
+
+/* --------------------------------------------------
+    Reset button style
+-------------------------------------------------- */
+
+.button-container {
+    margin-top: 25px;
+}
+
+button {
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+#reset-button:disabled {
+    cursor: not-allowed;
+}
+
+#reset-button:not(:disabled) {
+    cursor: pointer;
+    color: red;
+}
+
+#reset-button:not(:disabled):hover {
+    background-color: green;
+    color: #f0f0f0;
+}
+
+/* --------------------------------------------------
+    Visual feedback during dragging style
+-------------------------------------------------- */
+
+.dragged-item {
+    opacity: 0.5;
+    border: 1px dashed red;
+}
+
+/* --------------------------------------------------
+    Success and reset message style
+-------------------------------------------------- */
+
+.message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.message.success {
+    background-color: #2ECC71;
+}
+
+.message.reset {
+    background-color: #EC7063;
+}
+
+/* --------------------------------------------------
+    Responsive Styles
+-------------------------------------------------- */
+
+/* 600px and less */
+@media (max-width: 600px) {
+    .heading {
+        font-size: 10px;
+    }
+
+    .main-container {
+        gap: 2rem;
+    }
+
+    .both-container {
+        flex-direction: column;
+        gap: 1rem;
+        width: 80%;
+    }
+
+    .left-container,
+    .right-container {
+        height: 250px;
+        width: 80%;
+    }
+
+    .middle-container {
+        display: none;
+    }
+
+    button {
+        padding: 3px 13px;
+    }
+
+    .message {
+        font-size: 13px;
+        top: 130px;
+    }
+
+    .default-message {
+        height: 25vh;
+    }
+
+    .text,
+    .icon,
+    .default-message {
+        font-size: 12px;
+    }
+
+    .default-message i {
+        font-size: 13px;
+    }
+}
+
+/* 600px and greater */
+@media (min-width: 600px) {
+    .heading {
+        font-size: 14px;
+    }
+
+    .both-container {
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .left-container,
+    .right-container {
+        width: 40%;
+        height: 350px;
+    }
+
+    .middle-container {
+        padding: 0.5px 15px;
+    }
+
+    .default-message {
+        height: 39vh;
+    }
+}
+
+/* 768px and greater */
+@media (min-width: 768px) {
+    .heading {
+        font-size: 14px;
+    }
+
+    .both-container {
+        gap: 1rem;
+        width: 80%;
+    }
+
+    .left-container,
+    .right-container {
+        height: 400px;
+    }
+
+    .middle-container {
+        padding: 2px 20px;
+    }
+
+    .default-message {
+        height: 45vh;
+    }
+}
+
+/* 992px and greater */
+@media (min-width: 992px) {
+    .both-container {
+        gap: 1rem;
+        width: 70%;
+    }
+
+    .left-container,
+    .right-container {
+        height: 400px;
+    }
+
+    .middle-container {
+        padding: 2px 20px;
+    }
+
+    .default-message {
+        height: 45vh;
+    }
+}
+
+/* 1200px and greater */
+@media (min-width: 1200px) {
+    .both-container {
+        gap: 2rem;
+        width: 60%;
+    }
+
+    .left-container,
+    .right-container {
+        height: 400px;
+    }
+
+    .middle-container {
+        padding: 3px 30px;
+    }
+
+    .default-message {
+        height: 45vh;
+    }
+}
